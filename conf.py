@@ -14,7 +14,7 @@ template = {
     "path": "../Galileo"
 }
 enable_jsdelivr = {
-    "enabled": True,
+    "enabled": False,
     "repo": "yjl-nlp.github.io/Blog-With-GitHub-Boilerplate@gh-pages"
 }
 
