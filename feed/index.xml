@@ -1,24 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>fly's blog</title><link>/Blog-With-GitHub-Boilerplate/</link><description>To easy life</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/Blog-With-GitHub-Boilerplate/logo.png</url><title>fly's blog</title><link>/Blog-With-GitHub-Boilerplate/</link></image><language>zh-CN</language><lastBuildDate>Sun, 22 Nov 2020 14:25:50 +0806</lastBuildDate><pubDate>Sun, 22 Nov 2020 14:25:50 +0806</pubDate><item><title>逆波兰表达式转化</title><link>/Blog-With-GitHub-Boilerplate/archives/my-first-awesome-post/</link><description>&lt;p&gt;&lt;strong&gt;2084Team系列教程&lt;/strong&gt; :@(深思) ——Yu
-&lt;strong&gt;什么是逆波兰表达式&lt;/strong&gt;
-&lt;strong&gt;&lt;em&gt;把运算符写在操作数之前，称为波兰表达式(Polish Expression)或前缀表达式(Prefix Expression)，如+AB；把运算符写在操作数之后，称为逆波兰表达式(Reverse Polish Expression)或后缀表达式(Suffix Expression)，如AB+&lt;/em&gt;&lt;/strong&gt;
-（1）一般算术表达（中缀表达），如#3&lt;em&gt;(4+2)/2-5#，#为表达式界定符，逆波兰
-表达式（后缀表达式），如前述表达的后缀表达式为：3 4 2 + &lt;/em&gt; 2 / 5 -。
-（2）设中缀表达式的运算符有+、-、&lt;em&gt;、/、#五种，运算符的优先级别从高到低为()、&lt;/em&gt;、/、+、-、#；有
-括号先算括号内，再算括号外的，多层括号由内向外进行。
-（3）中缀表达式转换为后缀表达式需要用到一个临时栈 optr 暂存运算符。
-&lt;strong&gt;如何人工转化将一个中缀表达式转化为逆波兰表达式&lt;/strong&gt;
-假设有一个中缀表达式a+b&lt;em&gt;c-(d+e)：
-1.首先将这个中缀表达式的所有运算加括号((a+(b&lt;/em&gt;c))-(d+e))
-2.然后将所有运算符放到括号后面，这样就变成了((a(bc)&lt;em&gt; )+ (de)+ )-
-3.把所有括号去掉abc&lt;/em&gt;+de+-，最后得出的结果就是后缀表达式。
-&lt;strong&gt;逆波兰表达式的好处是什么？ :@(想一想) &lt;/strong&gt;
-1.不需要两次操作，只要从头扫描到尾就能求出结果，也不需要递归，只需要一个很小的栈就可以。所以逆波兰表达式算法取得了时间复杂度和空间复杂度上的双重优势。
-2.从左到右扫描，有运算符就运算，对于复杂的表达式，不容易出错；
-3.栈可以自动的记录中间结果；
-4.机器只需要维护一个操作数堆栈，栈中只有操作数和结果
-5.前后缀表达式的出现是为了方便计算机处理，它的运算符是按照一定的顺序出现，所以求值过程中并不需要使用括号来指定运算顺序，也不需要考虑运算符号（比如加减乘除）的优先级。
-&lt;strong&gt;（无视括号和优先级！！ :@(愤怒) ）&lt;/strong&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>fly's blog</title><link>/Blog-With-GitHub-Boilerplate/</link><description>To easy life</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/Blog-With-GitHub-Boilerplate/logo.png</url><title>fly's blog</title><link>/Blog-With-GitHub-Boilerplate/</link></image><language>zh-CN</language><lastBuildDate>Sun, 22 Nov 2020 14:33:21 +0806</lastBuildDate><pubDate>Sun, 22 Nov 2020 14:33:21 +0806</pubDate><item><title>逆波兰表达式转化</title><link>/Blog-With-GitHub-Boilerplate/archives/my-first-awesome-post/</link><description>&lt;p&gt;&lt;strong&gt;2084Team系列教程&lt;/strong&gt; :@(深思) ——Yu&lt;br&gt;
+&lt;strong&gt;什么是逆波兰表达式&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;&lt;em&gt;把运算符写在操作数之前，称为波兰表达式(Polish Expression)或前缀表达式(Prefix Expression)，如+AB；把运算符写在操作数之后，称为逆波兰表达式(Reverse Polish Expression)或后缀表达式(Suffix Expression)，如AB+&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;
+（1）一般算术表达（中缀表达），如#3&lt;em&gt;(4+2)/2-5#，#为表达式界定符，逆波兰&lt;br&gt;
+表达式（后缀表达式），如前述表达的后缀表达式为：3 4 2 + &lt;/em&gt; 2 / 5 -。&lt;br&gt;
+（2）设中缀表达式的运算符有+、-、&lt;em&gt;、/、#五种，运算符的优先级别从高到低为()、&lt;/em&gt;、/、+、-、#；有&lt;br&gt;
+括号先算括号内，再算括号外的，多层括号由内向外进行。&lt;br&gt;
+（3）中缀表达式转换为后缀表达式需要用到一个临时栈 optr 暂存运算符。&lt;br&gt;
+&lt;strong&gt;如何人工转化将一个中缀表达式转化为逆波兰表达式&lt;/strong&gt;&lt;br&gt;
+假设有一个中缀表达式a+b&lt;em&gt;c-(d+e)：&lt;br&gt;
+1.首先将这个中缀表达式的所有运算加括号((a+(b&lt;/em&gt;c))-(d+e))&lt;br&gt;
+2.然后将所有运算符放到括号后面，这样就变成了((a(bc)&lt;em&gt; )+ (de)+ )-&lt;br&gt;
+3.把所有括号去掉abc&lt;/em&gt;+de+-，最后得出的结果就是后缀表达式。&lt;br&gt;
+&lt;strong&gt;逆波兰表达式的好处是什么？ :@(想一想) &lt;/strong&gt;&lt;br&gt;
+1.不需要两次操作，只要从头扫描到尾就能求出结果，也不需要递归，只需要一个很小的栈就可以。所以逆波兰表达式算法取得了时间复杂度和空间复杂度上的双重优势。&lt;br&gt;
+2.从左到右扫描，有运算符就运算，对于复杂的表达式，不容易出错；&lt;br&gt;
+3.栈可以自动的记录中间结果；&lt;br&gt;
+4.机器只需要维护一个操作数堆栈，栈中只有操作数和结果&lt;br&gt;
+5.前后缀表达式的出现是为了方便计算机处理，它的运算符是按照一定的顺序出现，所以求值过程中并不需要使用括号来指定运算顺序，也不需要考虑运算符号（比如加减乘除）的优先级。&lt;br&gt;
+&lt;strong&gt;（无视括号和优先级！！ :@(愤怒) ）&lt;/strong&gt;&lt;br&gt;
     OpendType EvaluateExpression( )
     {
         InitStack( OPTR );
@@ -160,7 +160,7 @@
  }
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;逆波兰表达式求值算法解释&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;逆波兰表达式求值算法解释&lt;/strong&gt;&lt;br&gt;
 维护一个结果栈S3，该栈最后存放的是表达式的值。从左至右的遍历栈S1（直接使用上算法返回的指针，未独立建立s1）&lt;/p&gt;
 &lt;p&gt;（1）如果遇到的是数字，直接将数字压入到S3中&lt;/p&gt;
 &lt;p&gt;（2）如果遇到的是单目运算符，取S3栈顶的一个元素进行运算之后，将结果压入到栈S3中&lt;/p&gt;
