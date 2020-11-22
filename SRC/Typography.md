@@ -87,12 +87,6 @@ $$C_{m\times k}=A_{m\times n}\cdot B_{n\times k}$$
 ![Princess Mononoke](./images/Mononoke_Hime.jpg)
 
 ### Photoset
-[photos]
-![](./images/1463017562.jpg)
-![][1]
-![](./images/IMG_0053.jpeg)
-[/photos]
-
 
 [photos]
 ![](./images/IMG_0073.jpeg)
