@@ -15,7 +15,7 @@ template = {
 }
 enable_jsdelivr = {
     "enabled": False,
-    "repo": "yjl-nlp.github.io/Blog-With-GitHub-Boilerplate@gh-pages"
+    "repo": ""
 }
 
 # 站点设置
